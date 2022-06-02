@@ -26,3 +26,12 @@ Para hacer un commit utilizando el plug-in de GitHub de VSC
 5.- Agregar una descripcion
 6.- Aceptar el commit y poner la descripcion del commit
 
+Hcaer flow2
+1.- Importat el flow 1
+2.- Seleccionar importat una copia
+3.- Modificar el nombre del flow importado haciendo doble click en la pestaña
+4.- Descargar los nodos dashboards
+	-Ir a manage palette
+	-Buscar el paquete node-red-dashboard
+	-instalar
+
