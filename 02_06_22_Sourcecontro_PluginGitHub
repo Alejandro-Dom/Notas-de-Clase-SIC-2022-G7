@@ -1,0 +1,28 @@
+Nuevo Token para GitHub: **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**
+
+Para empezar el ejercicio debemos tener:
+1.- NodeRED
+2.- Flow1
+3.- Tener el repositorio en github.com del flow 1
+4.- Tener el repositorio clonado en mi máquina
+5.- Respaldar el archivo del flow1 en el repositorio del flow1 (tener el archivo JSON)
+
+Para iniciar el servidor se abre la terminal y se pone el comando node-red
+
+Para hacer un commit con el Source Control
+1.- Abrir el directorio que se desea modificar en VSC
+2.- Modificar el archivo
+3.- Hacer click en source control
+4.- Registrar todos los cambios ( +, stage Changes)
+5.- Escribir el comentario de commit
+6.- Hacer click en el boton commit
+7.- Hacer el push haciendo click en el boton commit
+
+Para hacer un commit utilizando el plug-in de GitHub de VSC
+1.- Modificar el archivo README.md
+2.- Hacer click en el plugin de GitHub
+3.- Iniciar sesión
+4.- Crear Pull Request
+5.- Agregar una descripcion
+6.- Aceptar el commit y poner la descripcion del commit
+
