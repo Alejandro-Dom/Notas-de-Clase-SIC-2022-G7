@@ -1,0 +1,7 @@
+1.- Hay que abrir NodeRED, poniendo el comando node-red en la terminal
+2.- Abrir la dirección localhost:1880
+	-Este es el enlace de seguridad en NodeRed https://nodered.org/docs/user-guide/runtime/securing-node-red
+	
+	-Para cerrar NodeRED, se usal el comando CTRL + C
+
+
