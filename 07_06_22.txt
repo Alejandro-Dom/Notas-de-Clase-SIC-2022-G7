@@ -37,3 +37,18 @@ Ejercicio_ Flow 3
 	-Para los nodos chart y gauge; usar el grupo graficos, y modificar los valores deseados
 
 
+MQTT
+-https://edu.codigoiot.com/course/view.php?id=851#section-1
+Para instalar MQTT en Ubuntu
+-https://mosquitto.org/download/
+	-sudo apt-add-repository ppa:mosquitto-dev/mosquitto-ppa
+	-sudo apt-get update
+	-Para comprobar la instalación y checar la versión usar mosquitto --version
+	-Se necesita sudo anetpt install mosquitto
+	-Comprobar nuevamente la version
+Mosquito es un programa que se queda abierto siempre, y se abre al momento de encender la MV
+Para comprobar el funcionamiento de mosquitto usar el comando netstat -an, y seguir el mensaje de error
+	
+
+
+
