@@ -15,3 +15,25 @@ Para generar un dashboard en NodeRED
 		-El grupo debe aparecer de la siguiente manera
 		[Tab]Group, y se agraga el label que queremos que aparezca
 
+JSON : Java Script Objet Notatio
+Cada nodo envia un JSON llamado msg, el cual tiene siempre la siguiente estructura: 
+{
+	"payload":valor,
+	"_msgID":id
+}
+
+Ejercicio_ Flow 3
+1.- Crear y clonar un nuevo repositorio
+2.- Crear el flow3
+	-Hacer clic en agregar flow en NodeREd
+4.- Se agregaran 4 nodos inject
+	-El primer nodo mandara una cadena de texto
+	-Los tres nodos restantes mandaran un número
+5.- Agregar los nodos, text, gauge y chart
+	-los ultimos 3 nodos se conectaran al nodo gaguge y chart, mientras que el primer nodo inject se conectara al nodo text
+6.-Se van a configurar los dashboard 
+7.-Configurar los nodos dashboard
+	-Para el nodo text; elegir el grupo que se agignó para texto, y modificar los valores deseados
+	-Para los nodos chart y gauge; usar el grupo graficos, y modificar los valores deseados
+
+
