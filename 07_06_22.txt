@@ -2,7 +2,7 @@
 2.- Abrir la dirección localhost:1880
 	-Este es el enlace de seguridad en NodeRed https://nodered.org/docs/user-guide/runtime/securing-node-red
 	
-	-Para cerrar NodeRED, se usal el comando CTRL + C
+	-Para cerrar NodeRED, se usa el comando CTRL + C
 
 Para generar un dashboard en NodeRED
 -Arrastrar el nodo text
@@ -14,3 +14,4 @@ Para generar un dashboard en NodeRED
 	-Presionar el nodo text para configurar
 		-El grupo debe aparecer de la siguiente manera
 		[Tab]Group, y se agraga el label que queremos que aparezca
+
