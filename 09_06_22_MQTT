@@ -1,0 +1,63 @@
+MQTT
+- https://edu.codigoiot.com/course/view.php?id=851#section-1
+Para instalar MQTT en Ubuntu
+- https://mosquitto.org/download/
+	-sudo apt-add-repository ppa:mosquitto-dev/mosquitto-ppa
+	
+	-sudo apt-get update
+	
+	-Para comprobar la instalación y checar la versión usar mosquitto --version
+	
+	-Se necesita sudo anetpt install mosquitto
+	
+	-Comprobar nuevamente la version
+	
+Mosquito es un programa que se queda abierto siempre, y se abre al momento de encender la MV
+
+Para comprobar el funcionamiento de mosquitto usar el comando netstat -an, y seguir el mensaje de error para instalar lo necesario
+MOsquito es un servidor que puede recibir mensaje, y este puede ser redistribuido, funciona similar a los hashtags
+
+- Mosquitto debe funcionar escuchando en el puerto 1883
+- Vamos a generar una suscripción a Mosquitto 
+	-Para generar una suscripción se debe ejecutar el siguiente comando
+		mosquitto_sub -h localhost -p 1883 -q 0 -t codigoIoT/G7/ejemplo
+	- -h es el nombre del host
+	- -p es el numero de puerto
+	- -q es la calidad de servicio
+	- -t es el tema al que nos vamos a suscribir
+Si sale un error de instalación, seguir el comando de instalacion sugerido
+
+- Para publicar un mensaje con Mosquitto se utiliza el siguiente comando
+	- mosquitto_pub -h localhost -p 1883 -q 0 -t codigoIoT/G7/ejemplo -m "mensaje"
+
+Ejercicio de broker publico
+1. Conocer la IP del broker
+	- nslookup broker.hivemq.com
+	- Usaremos la siguiente IP 35.157.61.99, la IP será usada como el nombre del host
+2. Hacer un suscriptor
+	- mosquitto_sub -h 35.157.61.99 -p 1883 -q 0 -i AleXDom_549 -t codigoIoT/g7/mosquitto/msg
+
+3. Hacer una publicación (el -i debe ser diferente al del comando anterior)
+	-mosquitto_pub -h 35.157.61.99 -p 1883 -q 0 -i Alex-6213 -t codigoIoT/g7/mosquitto/msg -m "mensaje"
+	
+Ejercicio gráfica colectiva
+1. Hacer un flow 4
+2. Agregar un nodo mqtt in
+	- server es la IP del broker
+	- topic es el tema en el que vamos a publicar
+3. Agregar y conectar un nodo JSON
+	- convertir a JavaScript Object
+4. Mandar un mensaje que incluya
+	{
+		"id":"Alex",
+		"temp":"",
+	}
+	{\"id\":\"Alex\",\"temp\":20} (para mandar por terminal)
+5. Agregar un nodo function y poner el siguiente código.
+	- msg.topic = msg.payload.id;
+	- msg.payload = msg.payload.temp;
+	- return msg;
+6. Agregar un nodo chart y configurarlo
+Opcional:
+7.- Agregar un nodo inject, que mande un JSON y conectarlo a un nodo de MQTT out, para hacer que mande la información cada n cantidad de segundos
+     
