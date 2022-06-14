@@ -1,0 +1,32 @@
+La IP del broker publico suele cambiar cada cierto tiemop, por lo que necesitamos volver a obtener nuevamente la IP con el siguiente comando:
+	- 18.156.8.172
+	
+En Node-RED, ir al nodo de MQTT y evitar la sección SERVER para así actualizar la nueva IP del broker publico
+
+Ejercicio hacer el Flow 5
+Vamos a obtener la unformación del clima de una fuente real, por API, esto con el fin de dar más conecpto al IoT, que es obtener datos en tiempo real.
+
+- Información en común
+	- Temperatura
+	- Humedad
+- Información personal
+	- Temperatura
+	- Humedad 
+	- CO2
+	- UV
+
+1. Dirigirse a openweathermap.org y obtener una cuenta gratuita
+	- Ir a API keys y crear una API key
+	- 4575e0df275d24df6c2c6f0fed8c5d18
+	( Las API son mecanismos que permiten a dos componentes de software comunicarse entre sí mediante un conjunto de definiciones y protocolos. Por ejemplo, el sistema de software del instituto de meteorología contiene datos meteorológicos diarios. La aplicación meteorológica de su teléfono “habla” con este sistema a través de las API y le muestra las actualizaciones meteorológicas diarias en su teléfono)
+	
+API call, se pide la información a la siguiente pagina
+
+Forma general
+https://api.openweathermap.org/data/2.5/weather?lat={latitud}&lon={longitud}&appid={API key}&units=metric
+
+Forma personal
+19.250851, -99.119540
+https://api.openweathermap.org/data/2.5/weather?lat=19.250851&lon=-99.119540&appid=4575e0df275d24df6c2c6f0fed8c5d18&units=metric
+
+
