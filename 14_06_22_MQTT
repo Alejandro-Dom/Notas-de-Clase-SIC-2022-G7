@@ -29,4 +29,45 @@ Forma personal
 19.250851, -99.119540
 https://api.openweathermap.org/data/2.5/weather?lat=19.250851&lon=-99.119540&appid=4575e0df275d24df6c2c6f0fed8c5d18&units=metric
 
+2. Hacer el Flow 5 que constara de los siguientes nodos:
+	- http requeste, en el cual pondremos la liga anterior, Forma personal, para obtener la información que deseamos
+	- json, el cual convertira la información del nodo http en formato JSON para despues poder utilizar los datos para crear gráficas
 
+Solicitud API
+- Se injecta una señal en intervalos de 2 minutos, se conectan los nodos http requeste y json, con la configuracion de siempre convertir a JavaScript Object.
+- Dos nodos de función para temperatura y humedad
+	- Temperatura 
+	
+	msg.payload = msg.payload.main.temp;
+	global.set ("tempFlow5", msg.payload);
+	return msg;
+	
+	- Humedad
+	msg.payload = msg.payload.main.humidity;
+	global.set ("humFlow5", msg.payload);
+	return msg;
+- A cada nodo function se le conecta un nodo gauge para gráficar; se tienen que configurar estos nodos
+
+Info General
+- Un nodo mqtt in, para poder mandar los datos a todo el grupo, se le conecta un nodo JSON, configurado igual al nodo anterior
+	- topic: codigoIoT/g7/mosquitto/flow5
+	
+- Dos nodos function para temperatura y humedad
+	- Temperatura
+	msg.topic = msg.payload.id;
+	msg.payload = msg.payload.temp;
+	return msg;
+	
+	- Humedad 
+	msg.topic = msg.payload.id;
+	msg.payload = msg.payload.hum;
+	return msg;
+	
+- Para cada nodo function añadir y configurar nodos chart, para que se generen las gráficas
+
+Enviar
+- Nodo inject que mande señal cada 15 segundos
+- Se agrega un nodo function que contenga el siguiente codigo, para que solamente se manden los datos de temperatura y humedad
+	- msg.payload = '{"id":"Alex","temp":'+global.get ("tempFlow5")+',"hum":'+global.get ("humFlow5")+'}';
+return msg;
+- Finalmente se agrega un nodo mqtt out
