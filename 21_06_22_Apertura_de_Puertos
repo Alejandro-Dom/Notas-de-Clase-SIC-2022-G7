@@ -1,0 +1,28 @@
+nslookup broker.hivemq.com  --> 35.157.252.226
+
+Repositorios de todos los compañeros: https://docs.google.com/spreadsheets/d/1s_RaDnrUEG3wdS_fm7fdf1gNFYoXVmumj7km8WwM8m0/edit?pli=1#gid=0
+
+Apertura de puertos
+1. Encontrar la IP de configuración local del modem
+2. Introducir nombre de usuario y contraseña
+3. Encontrar el redireccionamiento de puertos (Port Forwarding)
+4. Configuraciones
+	- Rango de puertos (publicos y privados) 1880-1880
+	- Protocolo TCP o TCP-UDP
+	- IP LAN o HOST de la máquina virtual -> 192.168.1.109
+	
+5. Abrir firewall en la máquina virtual
+	- sudo ufw enable
+	- sudo ufw allow 1880
+	
+	-Opcional: Agregar excepción al firewall de windows
+
+Obligaotrio: En caso de usar antivirus, agregar excepción al firewall
+
+6. Obtener la IP pública -->  201.133.214.44 , esta cambia cada vez que se prende la computadora
+
+7. Construir la IP de acceso
+
+http://201.133.214.44:1880/ui/#!/3?socketid=e1IwFbjlHjhK8_HDAAAB
+
+
