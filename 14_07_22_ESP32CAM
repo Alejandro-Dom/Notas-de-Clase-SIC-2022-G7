@@ -1,0 +1,17 @@
+Se necesita descargar Arduino directamente desde la tienda de apps o de: https://docs.arduino.cc/software/ide-v1/tutorials/Linux#please-read
+
+Usar el comando siguiente para permitir que mi usario pueda utilizar los puertos: 
+	- sudo usermode -a -G dialout alex
+
+Agregar el gestor de tarjetas 
+
+	
+Para instalar los drivers necesarios hay que utilizar los siguientes comandos:
+	- sudo usermod -a -G dialout $USER
+	- wget https://bootstrap.pypa.io/get-pip.py
+	- sudo apt-get install python3-distutils
+	- sudo apt-get install python3-apt
+	- sudo python3 get-pip.py
+	- sudo pip3 install pyserial
+	-
+	 

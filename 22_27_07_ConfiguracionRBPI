@@ -1,0 +1,16 @@
+1. Para conectar la Raspberry PI a la terminal se ocupa el comando
+	- ssh pi@[dirección IP]
+	
+2. Se tiene que activar el protocolo VNC
+	- sudo raspi-config
+	- interface options
+		- VNC
+3. Configurar la resolución de la raspberry
+	- Display Options
+		- VNC Resolution
+		- 1280*720
+4. Reiniciar la Raspbery
+5. Instalar VNC viewer : https://www.realvnc.com/es/connect/download/viewer/
+
+
+
