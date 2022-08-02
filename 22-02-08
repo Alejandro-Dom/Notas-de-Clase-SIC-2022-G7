@@ -15,3 +15,13 @@
 7. Actualizar IP del servidor mqtt
 	- ifconfig
 	- netstat -an
+	
+8. Comprobar el funcionamiento del MAX30102 (Sensor de oxigenación y ritmo cardíaco)
+	
+9. Clonar el repositorio esp32cam_max30100
+
+10. Abrir el acrhivo con extensión .ino en Arduino 
+
+11. Descargar la biblioteca SparkFun MAX3010x Pulse ande Proximity Sensor
+
+12. Hacer el circuito que viene en el código, sin desconectar el FTDI; se debe conectar unas resistencias pull up de 4.7 KOhm
