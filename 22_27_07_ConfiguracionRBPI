@@ -11,6 +11,11 @@
 		- 1280*720
 4. Reiniciar la Raspbery
 5. Instalar VNC viewer : https://www.realvnc.com/es/connect/download/viewer/
+6. En VNC viewer ingresar la IP a la que esta conectada la Raspberry
+	- Ingresar usuario y contraseña
+7. La ventana que aparece es la interfaz de la Raspbery
+
+
 
 
 
