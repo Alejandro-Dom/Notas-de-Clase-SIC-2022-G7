@@ -1,0 +1,46 @@
+Se comprobará el funcionamiento del MLX90614 o GY906 (sensor de temperatura infrarrojo)
+
+1. Primero hay que clonar el repositorio MLX_90614-TallerIot del Github de Codigo IoT
+
+2. Abrir el programa con extensión .ino en Arduino
+
+3. Hay qye descargar dos bibliotecas para hacer funcionar el programa; para descargar bibliotecas hay que picas en Sketch>Libraries>Manage Libraries
+	- Adafruit_MLX90614
+	- PubSubClient de Nick O' Leary
+	
+4. Realizar el circuito que viene en el códio sin desconectar el FTDI
+	- Sensor MLX90614  ->  ESP32
+	-         VIN      ->  5 V
+	-         GND      ->  GND
+	-         SDA      ->  14
+	-         SCL      ->  15
+
+5. En el código hay que actualizar SSID y la contraseña de la red
+
+6. Actualizar IP del servidor mqtt
+	- ifconfig
+	- netstat -an
+	
+Comprobar el funcionamiento del MAX30102 (Sensor de oxigenación y ritmo cardíaco)
+	
+7. Clonar el repositorio esp32cam_max30100: https://github.com/hugoescalpelo/esp32cam-max30100
+
+8. Abrir el acrhivo con extensión .ino en Arduino 
+
+9. Descargar la biblioteca SparkFun MAX3010x Pulse ande Proximity Sensor
+
+10. Hacer el circuito que viene en el código, sin desconectar el FTDI
+	- Max30102 -> ESP32
+	- VIN      ->  5 V
+	- GND      ->  GND
+	- SDA      ->  IO14
+	- SCL      ->  IO15
+	
+11. Hay que conectar dos resistencias pull-up entre VIN y SDA, y entre VIN y SCL, de valores de 4.7 K Ohms
+
+12. En el programa hay que revisar que en el void setup() el comando Wire.begin, tenga los Inputs en orden, como se muestra a continuación
+	- Wire.begin(14,15)
+	
+13. Conectar el FTDI a la computadora, poner el ESP32 en modo programador, presionar el botón de RESET y cargar el programa
+
+14. Reconectar a tierra el cable programador del ESP32 y volver a presionar el botón de RESET
