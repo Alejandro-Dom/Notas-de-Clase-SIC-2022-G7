@@ -1,0 +1,49 @@
+Para la evaluación continua
+
+Se requiere que todos los ejercicios en clase estén respaldados en mi repositorio
+
+Requisitos:
+	- Código correctamente comentado
+	- Archivo Read.md correctamente documentado y desarrollado
+		- Descripción
+		- Autor
+		- Enlaces de autor
+		- Documentación
+		- Evidencias
+Ejercicio 1:
+- Clonar el repositorio ESP32CAM_MQTT-Basic desde la página de Codigoiot en Github: https://github.com/codigo-iot/ESP32CAM_MQTT-Basic
+
+- Modificar Readme.md
+
+- Crear un fork del repositorio
+
+- Modificar código en la IDE de Arduino
+	- Actualizar el SSID y Password de la red a la que se quiere conectar
+	- Actualizar la IP del broker local
+		- en la terminal usar el comando ifconfig, y anotar la IP inet
+		- revisar que el broker esta en el puerto 1883 y que está escuchando, con el comando netstat -a
+		- El tema en donde se hará la publicación (codigoIoT/ejemplo/mqttin)
+			-Al final del void loop()
+		-El tema al que se va a suscribir (codigoIoT/ejemplo/mqtt)
+			- En la función callback
+			- En la función reconnect
+			
+- Subir el programa al microcontrolador
+
+- Configurar Mosquitto
+	- Ir a la dirección /usr/share/doc/mosquitto/examples/mosquitto.conf.examples y obtener el archivo de configuración de ejemplo
+	- Colocar el archivo mosquitto.conf en el directorio /etc/mosquitto/conf.d
+	- Descomentar las siguientes lineas
+		- 23 allow_anonymous true
+		- 233 listener 1883 0.0.0.0
+	- Reiniciar el servicio
+		- Consultar el servicio
+			- systemctl status mosquitto
+		- Detener servicio
+			- systemctl stop mosquitto
+		- Arrancar servicio
+			- systemctl start mosquitto
+
+(El comando sudo nano [nombre del archivo] permite abrir y el archivo en la terminal y poder modificarlo)
+		
+
