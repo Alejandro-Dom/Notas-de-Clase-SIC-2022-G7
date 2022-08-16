@@ -22,9 +22,9 @@ Ejercicio 1:
 	- Actualizar la IP del broker local
 		- en la terminal usar el comando ifconfig, y anotar la IP inet
 		- revisar que el broker esta en el puerto 1883 y que está escuchando, con el comando netstat -a
-		- El tema en donde se hará la publicación (codigoIoT/ejemplo/mqttin)
+		- El tema en donde se hará la publicación (codigoIoT/ejemplo/mqtt)
 			-Al final del void loop()
-		-El tema al que se va a suscribir (codigoIoT/ejemplo/mqtt)
+		-El tema al que se va a suscribir (codigoIoT/ejemplo/mqttin)
 			- En la función callback
 			- En la función reconnect
 			

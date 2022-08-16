@@ -6,7 +6,18 @@ Abrir el archivo
 	- 23 allow_anonymous true
 	- 233 listener 1883 0.0.0.0
 	
-2. Comprobar que mosquitto esta funcionando con el comando systemctr status mosquitto
+2. Comprobar que mosquitto esta funcionando con el comando systemctl status mosquitto
 	- Debe aparecer como Active (running)
+	
+3. Ejecutar los comandos siguentes para activar la excepción en el firewall de Ubuntu
+	- sufo ufw allow 1883 (Para configurar el servidor de modo que permita las conexiones SSH entrantes)
+	-sudo ufw enable 
 
-3.
+4. Comprobar que la información está llegando al broker local
+	- Desde la terminal
+		- mosquitto_sub -h localhost -t codigoIoT/ejemplo/mqtt
+		
+5. Mandar un mensaje desde la terminal, codigoIoT/ejemplo/mqttin
+	- mosquitto_pub -h localhost -t codigoIoT/ejemplo/mqttin -m ""
+		- mandar un true para que prenda el led flash
+		- mandar un false para apagar el led flash

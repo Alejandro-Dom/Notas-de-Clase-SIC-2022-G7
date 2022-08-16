@@ -1,0 +1,22 @@
+1. Importar el JSON de la carpeta ESP32CAM_MQTT_basic
+	- Configurar los temas mqtt
+		- El tema en el que recibiremos información codigoIot/ejemplo/mqtt
+		- El teme en el que mandaremos información codigoIoT/ejemplo/mqttin
+	- Ir al Dashboard
+	
+2. Hacer el ejercicio del MQTT JSON
+	-
+	
+3. Reportar de forma local los valores de temperatura y humedad relativa del sensor DH11 con el ESP32CAM para graficarlos en un dashboard
+	- Crear un programa arduino para el ESP32CAM 
+		- Leer el sensor DHT11
+		- Se conecte a Wifi
+		- Se conecte al broker local
+		- Envié los datos en formato JSON
+	- Tener funcionando el broker
+	- Hacer un Dashboard que:
+		- Suscriba al tema en el que se publica
+		- Separar las variables
+		- Grafique el valor actual de humedad relativa en un dashboard
+		- Haga una gráfica en el tiempo de la temperatura y humedad
+		- Si la temperatura llega a un valor x, se prenderá el led flash
