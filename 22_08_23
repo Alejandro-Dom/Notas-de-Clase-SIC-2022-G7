@@ -1,0 +1,5 @@
+Cómo actualizar a Node-Red 3
+
+https://nodered.org/docs/getting-started/local
+
+Usar el comando: sudo npm install -g --unsafe-perm node-red

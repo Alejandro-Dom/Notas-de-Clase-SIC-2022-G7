@@ -6,9 +6,9 @@
 	
 2. Hacer el ejercicio del MQTT JSON
 	- quite la biblioteca ESP8233WiFI y agregue la biblioteca WiFi.h
-	- modigiqué el ssid y la password, y la IP del broker local
+	- modigique el ssid y la password, y la IP del broker local
 	- cambie los nombres y configuraciones de los pines flashled y status led
-	- Modifiqué la información del JSON
+	- Modifique la información del JSON
 	
 3. Reportar de forma local los valores de temperatura y humedad relativa del sensor DH11 con el ESP32CAM para graficarlos en un dashboard
 	- Crear un programa arduino para el ESP32CAM 
