@@ -1,0 +1,22 @@
+Detector de Sintomas COVID
+
+1. Comprobar el funcionamiento del flow (cargar el programa DetectorSintomasCOVID y ver el dashboard)
+
+2.- Crear un botón de diagnoisto que haga las siguientes comparaciones:
+	- 35.5 < temperatura < 36.5
+	- spo2 > 90
+	- 60 < ritmo cardíaco < 100
+	- Si los valores se encuentran en estos rangos, se manda un mensaje de signos vitales normales
+	- Si cualquier valor se encuentra fuera de su rango, el mensaje indicará que los signos vitales son anormales y que debe ir con un medico
+
+3. Agregar nodos MySQL
+	- Manage Palette : node-red-node-mysql
+
+4. Crear un nuevo usario  de MySQL
+	- CREATE USER 'usuario'@'localhost' IDENTIFIED BY 'contraseña';
+	- GRANT ALL PRIVILEGES ON *.* TO 'usuario'@'localhost';
+
+5. Enviar la información obtenida por los sensores a la base de datos:
+	- msg.topic = "INSERT INTO registro (`nombre`,`correo`,`temp`,`bpm`,`sp02`,`protodiagnostico`) VALUES ('" + global.get ("Paciente") + "','" + global.get ("Correo") + "'," + global.get ("tir") + "," + global.get ("heartrate") + "," + global.get ("spo2") + ",'" + global.get("protodiagnostico") + "');";)
+	return msg;
+	

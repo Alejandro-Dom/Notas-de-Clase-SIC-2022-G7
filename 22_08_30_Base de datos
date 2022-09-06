@@ -15,7 +15,7 @@ Para el flow de esta actividad es necesario tener:
 		- SP02
 		- Protodiágnostico
 		
-### INSTRUCCIONES PARA LA BASE DE DATOS EN MySQL
+INSTRUCCIONES PARA LA BASE DE DATOS EN MySQL
 1. Intalar MySQL server
     - sudo apt update
     - sudo apt install mysql-server
@@ -39,11 +39,14 @@ Para el flow de esta actividad es necesario tener:
     - CREATE TABLE [nombre] (id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP, nombre CHAR (248) NOT NULL, correo CHAR (248) NOT NULL, temp FLOAT(4,2) NOT NULL, bpm INT(1) UNSIGNED NOT NULL, sp02 INT(1) UNSIGNED NOT NULL, protodiagnostico CHAR (248) NOT NULL);
     - show tables;
     - describe [nombre];
+    
+TEMA MQTT pub: codigoIoT/detectorSintomas/flow
+TEMA MQTT sub: odigoIoT/detectorSintomas/esp
 ___________________________________________________________________________________________________________________________________________________________
 
 	- Un programa para el sensor max30102
 
-### INSTRUCCIONES PARA EL PROGRAMA DEL SENSOR MAX30102
+INSTRUCCIONES PARA EL PROGRAMA DEL SENSOR MAX30102
 1. 
 
 ________________________________________________
