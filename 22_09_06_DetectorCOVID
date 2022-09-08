@@ -20,3 +20,5 @@ Detector de Sintomas COVID
 	- msg.topic = "INSERT INTO registro (`nombre`,`correo`,`temp`,`bpm`,`sp02`,`protodiagnostico`) VALUES ('" + global.get ("Paciente") + "','" + global.get ("Correo") + "'," + global.get ("tir") + "," + global.get ("heartrate") + "," + global.get ("spo2") + ",'" + global.get("protodiagnostico") + "');";)
 	return msg;
 	
+6. Instalar nodos node-red-node-email
+

@@ -1,0 +1,32 @@
+GRAFABA
+
+1. Instalar Grafana (visualizador de datos)
+	- https://grafana.com/docs/grafana/latest/setup-grafana/installation/debian/
+	- sudo apt-get install -y apt-transport-https
+	- sudo apt-get install -y software-properties-common wget
+	- sudo wget -q -O /usr/share/keyrings/grafana.key https://packages.grafana.com/gpg.key
+	- echo "deb [signed-by=/usr/share/keyrings/grafana.key] https://packages.grafana.com/enterprise/deb stable main" | sudo tee -a /etc/apt/sources.list.d/grafana.list
+	- sudo apt-get update
+	- sudo apt-get install grafana
+
+	Ejecución manual de grafana
+		- sudo /bin/systemctl start grafana-server
+ 2. Abrir Grafana 
+ 	- localhost:3000
+ 	- User: admin
+ 	- Password: admin
+ 	- actualizar contraseña
+ 3. Agregar una fuente de información
+ 	- Configuración > data Sources
+ 4. Agregar un data source de MySQL
+ 	- host: localhost:3306
+ 	- database: nombre de la base de datos creada en My SQL
+ 	- User & Password: el mismo al que se otorgo privilegios
+ 5. Agregar un nuevo panel y configurarlos
+ 6. Insertar el panel "Registro" en el dashboard "Detector sintomas Covid" en NodeRed
+ 	- Share Panel
+ 		-Embed (<iframe src="http://localhost:3000/d-solo/f_Xyq1MVz/registro?from=1662629807188&to=1662673007188&orgId=1&panelId=123125" width="450" height="200" frameborder="0"></iframe>)
+ 		
+ 7. Dirigirse a etc/grafana y editar el archivo grafana.ino con el comando [sudo nano grafana.ini]
+ 	- En Security
+ 		- allow_embedding = true
