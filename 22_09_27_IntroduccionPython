@@ -1,9 +1,10 @@
 Introducción a Python - Manejo de archivos
 
--
+- https://edu.codigoiot.com/mod/lesson/view.php?id=2024&pageid=2569
 1. Realizar el ejercicio de la sección 3
 	- Realizar el circuito de conexión entre la Raspberry Pi y el Sensor de distancia Ultrasónico HC-SR04
 	- Crear un nuevo repositorio que contenga el codigo de este ejercicio
 	- Crear un programa basado en el repositorio de la lección
 	- Crear un programa basado en el repositorio de la lección
+
 
