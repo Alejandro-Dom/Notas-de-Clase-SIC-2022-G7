@@ -1,0 +1,27 @@
+#Introducción a Python - MySQL
+ 
+ 1. Instalar el conector MySQL
+ 	~~~ 
+ 	pip install mysql-connector-python
+ 	~~~
+2. Abrir MySQL 
+	- user = alex
+	- password = 4892
+	- crear una base de datos llamada codigoIoT
+3. Abrir desde terminal el archivo llamado connector_Test.py
+	~~~
+	#Bibliotecas
+	import mysql.connector
+
+	#Programa
+	print("Conectandose a la base de datos")
+	cnx = mysql.connector.connect(user='alex', password='4892', host = 		'127.0.0.1', database = 'codigoIoT') 
+		- la IP 127.0.0.1 hace referencia a la IP local
+	print("Conexión realizada")
+	print(cnx)
+
+	print("Cerrar conexión")
+	cnx.close()
+	print("Conexión cerrada")
+	~~~
+	
