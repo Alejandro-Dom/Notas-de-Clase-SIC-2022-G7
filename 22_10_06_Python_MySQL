@@ -1,0 +1,23 @@
+#Introducción a Python
+
+Realizar un programa en Python que inserte un dato en la base de datos RFID
+	- Crear una base de datos para el ejercicio RFID
+		- create table rfid (id INT (6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP, nombre char (248) NOT NULL, texto CHAR (248) NOT NULL, rfid INT (12) NOT NULL);
+	- INSERT INTO rfid (nombre,texto,rfid) VALUES ('Alex Dominguez', 'Test Python 1',  //desde mySQL
+
+Realizar un programa en Python que lea un TAG en la Raspberry Pi y pongas los datos en la base de datos 
+	- Instlar mysql connector en la raspebrry pi
+	- Establecer conexión desde la raspebrry Pi hasta la base ed datos en la máquina virtual
+	- Abrir el puerto 3306 en la máquina virtual
+		- sudo ufw allow 3306
+	- Configurar MySQL para que reciba conexiones externas
+		- ir a /etc/mysql/mysql.conf.d/my.cnf
+		- buscar la línea bind-address y cambiar la IP local (127.0.0.1) por la IP externa o poner 0.0.0.0 para permitir cualquier IP externa.
+		- actualizar el usuario o crear uno nuevo
+			- RENAME USER 'alex'@'localhost' TO 'alex'@'ip_remoto'; en IP remoto poner la IP de la cual se realizara la conexión; si ponemos % el usuario admitira conexiones remotas de cualquier IP
+			- CREATE USER 'name'@'ip_servidor_remoto' IDENTIFIED BY 'password';
+				- GRANT CREATE, ALTER, DROP, INSERT, UPDATE, DELETE, SELECT, REFERENCES, RELOAD on *.* TO 'pym'@'ip_servidor_remoto' WITH GRANT OPTION;
+				- FLUSH PRIVILEGES;
+	- Ejecutar los ejemplos de MySQL y Python en la raspberry
+	
+	- insertquery = ("INSERT INTO rfid (nombre,texto,rfid) VALUES ('Alex','Test Python 2',50986321);")

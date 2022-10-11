@@ -1,0 +1,19 @@
+# Para corregir los errores de las clases pasada:
+
+- Crear o modificar el usuario con el comando
+	- GRANT ALL ON *.* TO 'alex'@'%';
+	- FLUSH PRIVILEGES;
+
+Para comprobar que el usuario se puede conectar desde cualquier IP usar los comandos
+	- use mysql;
+	- SELECT user, host FROM user;
+	- El host del usuario debe tener el simbolo %
+- Ejecutar los programas desde Thony Python
+
+Para cambiar el tipo de dato en una columna de una base de datos:
+	- ALTER TABLE rfid MODIFY COLUMN rfid double;
+	
+Hacer un programa que lea los datos de un TAG y los envie a la base de datos rfid
+	
+	
+GitKey: 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
