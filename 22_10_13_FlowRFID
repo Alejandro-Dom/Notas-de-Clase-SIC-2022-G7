@@ -1,0 +1,23 @@
+1- Ejecutar el programa de Python desde NodeRed, en la máquina virtual
+*Usuario msql alexlocal password 48992
+	- Nodo exec
+		- python3 query_mysql.py = python3 /home/alex/Documents/GitHub/Python_LectorRFID_MySQL/query_mysql.py
+2. Instalar en Raspberry
+	- NodeJS 16.12LTS (v16.x): 	https://github.com/nodesource/distributions/blob/master/README.md
+		- curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash - &&\
+sudo apt-get install -y nodejs
+	- NodeRed (no usar la version de Raspberry, usar running locally): 	https://nodered.org/docs/getting-started/local
+		- sudo npm install -g --unsafe-perm node-red
+	- Nodos Dashboard desde NodeRed
+2.1 Entrar a la IP de la Raspberry
+	- abrir el puerto 1880 en la Raspberry pi	
+		- sudo apt install ufw
+		- sudo ufw allow ssh
+		- sudo ufw allow vnc
+		- sudo ufw allow 1880
+		- sudo ufw enable
+		- sudo reboot
+	- en mauina virtual IP.RBpi:1880
+3. correr el ejemplo del paso 1
+
+
