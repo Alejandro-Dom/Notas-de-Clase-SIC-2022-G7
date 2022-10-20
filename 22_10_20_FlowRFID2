@@ -1,0 +1,22 @@
+#Control de Acceso con RFID
+1. Cambiar los valores del tag para que contenga la información de su portador
+	- Nombre 
+	- Edad
+	- Telefono
+	- Fecha de nacimiento
+	- Matrícula
+2. Realizar un programa en python que realice lo siguiente:
+	- Leer el RFID desde la Raspberry Pi
+	- Recibir un argumento
+	- Escribir en la base de datos de la maquina virtual
+	- Cambiar la estructura del programa para que se ejectue unicamente una vez al abrirlo
+	
+3. Realizar un flow que permita realizar la lectura del tag RFID y enviar un comentario a la base de datos
+	- Nodo función texto
+		- global.set("text",msg.payload);
+		- return msg;
+	- Nodo Function append (lectura de TAG)
+		- msg.payload = '"' + global.get("text") + '"';
+		- return msg;
+
+
